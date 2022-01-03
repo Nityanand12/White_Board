@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src="http://localhost:8000/socket.io/socket.io.js"></script> -->
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  
+  
+  <div class="tool-bar">
+    <div class="tool">
+      <img src="./NewIcons/Black_Pencil.svg" alt="" id="pencil" class="active tool-image">
+    </div>
+    <div class="tool">
+      <img src="./NewIcons/Eraser.svg" alt="" id="eraser" class="tool-image">
+    </div>
+    <div class="tool">
+      <img src="./NewIcons/StickyNote.svg" alt="" id="sticky" class="tool-image">
+    </div>
+    <div class="tool">
+      <img src="./NewIcons/Undo.svg" alt="" id="undo" class="tool-image">
+    </div>
+    <div class="tool">
+      <img src="./NewIcons/Redo.svg" alt="" id="redo" class="tool-image">
+    </div>
+    <div class="tool">
+      <img src="./NewIcons/Download.svg" alt="" id="download" class="tool-image">
+    </div>
+    <input type="file" name="" id="">
+  </div>
+
+  <div class="stickyPad">
+    <div class="nav-bar">
+      <div class="close"></div>
+      <div class="minimize"></div>
+    </div>
+    <div class="text-area">
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- mycode -->
+  <div>
+  <button class="Layer1">Master</button>
+
+  <div class="dropdown">
+    <button class="dropbtn">Child 1</button>
+    <div class="dropdown-content">
+      <div><button class="Layer2_1">Master Board</button></div>
+      <div><button class="Layer2_2">Child1 Board</button></div>
+      <div><button class="Import1ToLayer2">Import Master to Child1</button></div>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Child 2</button>
+    <div class="dropdown-content">
+      <div><button class="Layer3_1">Master Board</button></div>
+      <div><button class="Layer3_2">Child2 Board</button></div>
+      <div><button class="Import1ToLayer3">Import Master to Child2</button></div>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Child 3</button>
+    <div class="dropdown-content">
+      <div><button class="Layer4_1">Master Board</button></div>
+      <div><button class="Layer4_2">Child3 Board</button></div>
+      <div><button class="Import1ToLayer4">Import Master to Child3</button></div>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Child 4</button>
+    <div class="dropdown-content">
+      <div><button class="Layer5_1">Master Board</button></div>
+      <div><button class="Layer5_2">Child4 Board</button></div>
+      <div><button class="Import1ToLayer5">Import Master to Child4</button></div>
+    </div>
+  </div>
+  </div>
+  <div>
+    <button class="Import2ToLayer1">Import Child1 to Master</button>
+    <button class="Import3ToLayer1">Import Child2 to Master</button>
+    <button class="Import4ToLayer1">Import Child3 to Master</button>
+    <button class="Import5ToLayer1">Import Child4 to Master</button>
+  </div>
+  <!-- The Canvas API provides a means for drawing graphics via JavaScript and the HTML <canvas> element -->
+    <!-- ek trh ka board -->
+  <!-- default size 300*150 is tag me hm drwa krte h ye ek trf ka placeholder bol skte ho -->
+  
+  <canvas></canvas>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  const socket = io.connect("http://localhost:3000");
+  console.log("Socket Connected");
+</script>
+  <script src="script2.js"></script>
+  
+
+</body>
+</html>
