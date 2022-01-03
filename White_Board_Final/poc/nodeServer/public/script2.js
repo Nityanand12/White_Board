@@ -109,7 +109,6 @@ for(let i=0;i<tools.length;i++){
     let cTool= e.currentTarget;
     let name= cTool.getAttribute("id");
     if(name=="pencil"){
-      socket.emit("message","Pencil was selected");
       tool.strokeStyle="black";
     }
     else if(name=="eraser"){
@@ -506,10 +505,3 @@ Import5ToLayer1.addEventListener("click",function(){
 
 
 
-socket.on("broadcast", function(data){
-  alert(data);
-})
-
-socket.on("broadcast2", function(data){
-  redraw(1);
-})
